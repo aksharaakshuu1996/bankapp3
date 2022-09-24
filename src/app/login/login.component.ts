@@ -28,29 +28,51 @@ export class LoginComponent implements OnInit {
   }
 
 
-login(){
-var acnum=this.acno
-var psw=this.psw 
-let userDetails=this.userDetails
-if(acnum in userDetails){
-  if(psw==userDetails[acnum]['password']){
-    alert("login sucess")
+// login(){
+// var acnum=this.acno
+// var psw=this.psw 
+// let userDetails=this.userDetails
+// if(acnum in userDetails){
+//   if(psw==userDetails[acnum]['password']){
+//     alert("login sucess")
+//   }
+//   else{
+//     alert("user not exist or incorrect password")
+//   }
+// }
+
+login(a:any,b:any){
+console.log(a.value);
+console.log(b.value);
+
+
+
+
+
+  var acnum=a.value
+  var psw=b.value
+  let userDetails=this.userDetails
+  if(acnum in userDetails){
+    if(psw==userDetails[acnum]['password']){
+      alert("login sucess")
+    }
+    else{
+      alert("user not exist or incorrect password")
+    }
   }
-  else{
-    alert("user not exist or incorrect password")
-  }
-}
+  
 
+//   alert('login clicked')
+// }
 
-  alert('login clicked')
-}
-acnoChange(event:any){
-  this.acno=event.target.value
-  console.log(this.acno)
-}
+// acnoChange(event:any){
+//   this.acno=event.target.value
+//   console.log(this.acno)
+// }
 
-pswChange(event:any){
-  this.psw=event.target.value
-  console.log(this.psw)
+// pswChange(event:any){
+//   this.psw=event.target.value
+//   console.log(this.psw)
+// }
 }
 }
