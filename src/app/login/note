@@ -1,1 +1,20 @@
 1.2.3 event binding using template rendering variable 
+
+2.two way binding
+ 2.1  ngModel -formModule
+
+
+
+
+
+*)redirection------navigateByUrl-----router class method
+*)dependency injection method is used a class into antother class,data sharing b/w 2 dependent classses
+*)angular servises------------to store redendent(duplicate datas) datas
+*)ng g s service name
+*)cube shape=function
+*)cuboid shape= method
+
+validating inputs
+*angular formModule validatio
+    1.template driven form
+    2.model driven form

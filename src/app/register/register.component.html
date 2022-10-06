@@ -1,0 +1,36 @@
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> -->
+
+<div class="text-white ms-5 p-3"> </div>
+<div class="container-1">
+    <div class="content w-50 rounded-3">
+    <form (ngSubmit)="register()">
+        <div class="text-center"><p class="fs-1">Register</p></div>
+    <!-- <div class="mb-3"> -->
+      <!-- <label for="exampleInputEmail1" class="form-label">User Name</label> -->
+      <!-- <input type="text" class="form-control" id="uname" aria-describedby="emailHelp"> -->
+      <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+    <!-- </div> -->
+    <div class="mb-3">
+        <label for="uname" class="form-label">User name</label>
+        <input name="uname" type="text" placeholder="username" [(ngModel)]="uname"   class="form-control" id="uname" >
+        <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+      </div>
+    <div class="mb-3">
+      <label for="acno" class="form-label">Account Number</label>
+      <input  name="acno" type="password"  [(ngModel)]="acno" class="form-control" id="acno">
+    </div>
+    <div class="mb-3">
+        <label for="pswd" class="form-label">Password</label>
+        <input  name="pswd" type="password"  [(ngModel)]="pswd" class="form-control" id="pswd">
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-outline-primary mb-3 w-50 mt-3" (click)="register()">register</button></div>
+
+  <div class="text-center">
+      <p class="fs-6">Don't have an account?  <a href="" routerLink="register"  >Register here</a> 
+          <!-- <a href="./reg.html"> Create</a> -->
+       </p>
+  </div>
+  </form>
+    </div>
+</div>

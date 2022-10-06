@@ -1,0 +1,74 @@
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> -->
+
+<div class="text-white ms-5 p-3 "> 
+  <h1>Welcome {{user}} !!</h1>
+</div>
+<div class="text-white ms-5 pe-5 ps-5 bg-light  " style="height: 50px ; width: 300px; border-radius: 10px; "> 
+<a routerLink="/transaction">view transaction history</a>
+</div>
+
+
+<div class="container-1">
+    <div class="content w-50 rounded-3">
+    <form (ngSubmit)="deposit()">
+        <div class="text-center"><p class="fs-1">Deposit</p></div>
+    <!-- <div class="mb-3"> -->
+      <!-- <label for="exampleInputEmail1" class="form-label">User Name</label> -->
+      <!-- <input type="text" class="form-control" id="uname" aria-describedby="emailHelp"> -->
+      <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+    <!-- </div> -->
+    <div class="mb-3">
+        <label for="Acnumber" class="form-label">Acnumber</label>
+        <input name="acnumber" type="text" placeholder="enter acnumber" [(ngModel)]="acnum"   class="form-control" id="acno" >
+        <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+      </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input  name="password" type="text"  [(ngModel)]="pswrd" class="form-control" id="psw">
+    </div>
+    <div class="mb-3">
+        <label for="amount" class="form-label">Amount</label>
+        <input  name="amount" type="text"  [(ngModel)]="amnt" class="form-control" id="amt">
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-outline-primary mb-3 w-50 mt-3">Deposit</button></div>
+
+  
+  </form>
+</div>
+
+
+<div class="text-white ms-5 p-3"> </div>
+<div class="container-1">
+    <div class="content w-50 rounded-3">
+    <form (ngSubmit)="withdraw()">
+        <div class="text-center"><p class="fs-1">Withdraw</p></div>
+    
+
+        <!-- <form (ngSubmit)="Withdraw()"> -->
+
+
+
+<div class="mb-3">
+        <label for="Acnumber" class="form-label">Acnumber</label>
+        <input name="acnumber" type="text" placeholder="enter acnumber" [(ngModel)]="acnum1"   class="form-control" id="acno1" aria-describedby="emailHelp">
+        <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+      </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input  name="password" type="text"  [(ngModel)]="pswrd1" class="form-control" id="psw1">
+    </div>
+    <div class="mb-3">
+        <label for="Amount" class="form-label">Amount</label>
+        <input  name="amount" type="text"  [(ngModel)]="amnt1" class="form-control" id="amt1">
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-outline-primary mb-3 w-50 mt-3">withdraw</button></div>
+
+  </form>
+    
+</div>
+
+
+
+  
