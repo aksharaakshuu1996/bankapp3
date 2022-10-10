@@ -16,5 +16,19 @@
 
 validating inputs
 *angular formModule validatio
-    1.template driven form
-    2.model driven form
+    1.template driven form  -html
+    2.model driven form  -ts
+       2.1) -reactive form
+          -form group
+          -array
+          -controller
+
+
+
+    npm i-to install node pac module  while cloning angular project
+
+
+local storage in angular
+    -setItem()
+    -getItem()
+    -removeItem()

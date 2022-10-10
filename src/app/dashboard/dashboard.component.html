@@ -7,20 +7,18 @@
 <a routerLink="/transaction">view transaction history</a>
 </div>
 
+<div class="text-white ms-5 pe-5 ps-5 bg-light  " style="height: 50px ; width: 300px; border-radius: 10px; "> 
+  <a routerLink="/register">SignOut</a>
+  </div>
+
 
 <div class="container-1">
     <div class="content w-50 rounded-3">
     <form (ngSubmit)="deposit()">
         <div class="text-center"><p class="fs-1">Deposit</p></div>
-    <!-- <div class="mb-3"> -->
-      <!-- <label for="exampleInputEmail1" class="form-label">User Name</label> -->
-      <!-- <input type="text" class="form-control" id="uname" aria-describedby="emailHelp"> -->
-      <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
-    <!-- </div> -->
     <div class="mb-3">
         <label for="Acnumber" class="form-label">Acnumber</label>
         <input name="acnumber" type="text" placeholder="enter acnumber" [(ngModel)]="acnum"   class="form-control" id="acno" >
-        <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
       </div>
     <div class="mb-3">
       <label for="password" class="form-label">Password</label>
@@ -63,10 +61,11 @@
         <input  name="amount" type="text"  [(ngModel)]="amnt1" class="form-control" id="amt1">
       </div>
       <div class="text-center">
-        <button type="submit" class="btn btn-outline-primary mb-3 w-50 mt-3">withdraw</button></div>
+        <button type="submit" class="btn btn-outline-primary mb-3 w-50 mt-3">withdraw</button>
+      </div>
 
   </form>
-    
+      
 </div>
 
 

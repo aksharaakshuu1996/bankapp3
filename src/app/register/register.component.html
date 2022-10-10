@@ -3,7 +3,7 @@
 <div class="text-white ms-5 p-3"> </div>
 <div class="container-1">
     <div class="content w-50 rounded-3">
-    <form (ngSubmit)="register()">
+    <form (ngSubmit)="register() " [formGroup]="registerForm">
         <div class="text-center"><p class="fs-1">Register</p></div>
     <!-- <div class="mb-3"> -->
       <!-- <label for="exampleInputEmail1" class="form-label">User Name</label> -->
@@ -12,17 +12,25 @@
     <!-- </div> -->
     <div class="mb-3">
         <label for="uname" class="form-label">User name</label>
-        <input name="uname" type="text" placeholder="username" [(ngModel)]="uname"   class="form-control" id="uname" >
+        <input name="uname" type="text" placeholder="username" formControlName="uname"   class="form-control" id="uname" >
         <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
       </div>
+      <!-- *ngIf -->
+      <div *ngIf="this.registerForm.get('uname')?.errors&&this.registerForm.get('uname')?.touched" class="text-danger"><p>invalid username</p></div>
+
     <div class="mb-3">
       <label for="acno" class="form-label">Account Number</label>
-      <input  name="acno" type="password"  [(ngModel)]="acno" class="form-control" id="acno">
+      <input  name="uname" type="password"  formControlName="acno" class="form-control" id="acno">
     </div>
-    <div class="mb-3">
+
+    <div *ngIf="this.registerForm.get('acno')?.errors&&this.registerForm.get('acno')?.touched" class="text-danger"><p>invalid accountnumber</p></div>
+
+ <div class="mb-3">
         <label for="pswd" class="form-label">Password</label>
-        <input  name="pswd" type="password"  [(ngModel)]="pswd" class="form-control" id="pswd">
+        <input  name="pswd" type="password"  formControlName="pswd" class="form-control" id="pswd">
       </div>
+      <div *ngIf="this.registerForm.get('pswd')?.errors&&this.registerForm.get('pswd')?.touched" class="text-danger"><p>invalid password</p></div>
+
       <div class="text-center">
         <button type="submit" class="btn btn-outline-primary mb-3 w-50 mt-3" (click)="register()">register</button></div>
 

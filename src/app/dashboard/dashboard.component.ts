@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { DataService } from '../services/data.service';
 
 @Component({
@@ -14,13 +15,15 @@ export class DashboardComponent implements OnInit {
   pswrd=""
   amnt=""
 
+  
+ 
 
 
   acnum1=""
   pswrd1=""
   amnt1=""
 
-  constructor(private ds:DataService) {
+  constructor(private ds:DataService,) {
      this.user=this.ds.currentUser
      
    }
@@ -36,10 +39,19 @@ export class DashboardComponent implements OnInit {
   
 const result=this.ds.deposit(acnum,pswrd,amnt)
 if(result){
+  
+
   alert(`${amnt} is credited,new balance  is ${result}`)
 
 }
   }
+
+
+
+
+
+
+
   withdraw(){
     var acnum=this.acnum1
     var pswrd=this.pswrd1
