@@ -17,9 +17,8 @@
       <!-- </div> -->
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Account Number</label>
-        <input name="acnum" type="text" [placeholder]="acnt" formControlName="acno" class="form-control" id="acnum"
+        <input name="acnum" type="text"  formControlName="acno" class="form-control" id="acnum"
           aria-describedby="emailHelp">
-        <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
       </div>
 
       <div *ngIf="this.loginForm.get('acno')?.errors&&this.loginForm.get('acno')?.touched" class="text-danger">

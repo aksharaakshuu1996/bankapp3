@@ -1,6 +1,12 @@
-h2{
-    color: aliceblue;
+
+tr{
+    color: black;
+}
+.table{
+    background-color: rgba(223, 228, 231, 0.597);
+    padding: 10px;
 }
 a{
-    color: aliceblue;
+    background-color: rgba(184, 209, 234, 0.586);
+    padding: 10px;
 }
